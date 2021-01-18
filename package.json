@@ -21,6 +21,7 @@
     "jsdom-global": "^3.0.2",
     "mocha": "^8.2.1",
     "mocha-jsdom": "^2.0.0",
+    "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "zombie": "^6.1.4"
