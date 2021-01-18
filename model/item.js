@@ -1,4 +1,4 @@
-var http = require('https')
+
 const fetch = require('node-fetch');
 
 class Item {
@@ -14,7 +14,6 @@ class Item {
             path: this.itemlink,
             method: 'GET',
             headers: {
-
                 'sec-ch-ua-mobile': '?0',
                 'sec-fetch-dest': 'document',
                 'sec-fetch-mode': 'navigate',
@@ -33,19 +32,6 @@ class Item {
                 'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36',
             },
         };
-
-        // const req = http.request(options, async (res) => {
-        //     console.log('req')
-
-        //     return await res.headers.stockstatus
-
-
-        // })
-        // req.on('error', (e) => {
-        //     console.error(e);
-        // });
-
-        // req.end()
 
         var res = await fetch(this.hostname + this.itemlink, options)
         return res.headers.get('stockstatus')
